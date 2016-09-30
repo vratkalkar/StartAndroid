@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.ben-manes.versions' version '0.13.0'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.9.4"
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'gs-gradle-sept'
+    version = '0.1.0'
+}
